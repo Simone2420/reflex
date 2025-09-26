@@ -12,9 +12,8 @@ style = {
     "#special-input": {"width": "20vw"},
     # Apply styles to specific components.
     rx.text: {
-        "font_family": "Comic Sans MS",
+        "font_family": "Roboto",
         
-       
     },
     rx.divider: {
         "margin_bottom": "1em",
@@ -33,6 +32,20 @@ style = {
     },
     rx.code: {
         "color": "green",
+    },
+    rx.link: {
+        "text_decoration": "none",
+        "color": "blue",
+    },
+    rx.button: {
+        "background_color": "#33FF4E",
+    },
+    ".button:hover": {
+        "background_color": "#28CC3E",
+    },
+    ".link:hover": {
+        "text_decoration": "none",
+        "color": "#33FF4E",
     },
     "@keyframes colorchange": {
         "from": {"color": "red"},

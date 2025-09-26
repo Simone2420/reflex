@@ -24,8 +24,7 @@ def index() -> rx.Component:
         nav_bar(),
         rx.heading("Hola", class_name="text",),
         rx.text("Hola 2", class_name="text",),
-        link_button("Ingreso","https://reflex.dev/docs/library/"),
-        margin="30px",
+        margin="10px",
     )
     
 
