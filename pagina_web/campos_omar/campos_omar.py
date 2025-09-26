@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from campos_omar.components.nav_bar import *
 from campos_omar.components.styles import *
+from campos_omar.components.section import *
 from rxconfig import config
 
 api = FastAPI()
@@ -22,9 +23,9 @@ def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.vstack(
         nav_bar(),
-        rx.heading("Hola", class_name="text",),
-        rx.text("Hola 2", class_name="text",),
+        section("Transformando cosechas en alimentos", None, "hero.png"),
         margin="10px",
+        
     )
     
 
