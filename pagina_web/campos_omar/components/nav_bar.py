@@ -33,7 +33,7 @@ def nav_bar() -> rx.Component :
         padding_x="20px",
         width="100%",
         height="50px",
-        z_index="99"
+        z_index="9"
     )
 def link_button(icon: str | None, text:str, url:str) -> rx.Component:
     return rx.link(
