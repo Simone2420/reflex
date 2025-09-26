@@ -3,11 +3,19 @@ def nav_bar() -> rx.Component :
     return rx.hstack(
         rx.text(
             "Nombre Empresa",
-            color="#AEDD2B",
+            color="#E4E4E4",
             class_name=".text",
             
         ),
+        rx.hstack(
+            rx.link("Inicio", href="#", color="#ffffff"),
+            rx.link("Servicios", href="#", color="#ffffff"),
+            rx.link("Contacto", href="#", color="#ffffff"),
+        ),
         position="sticky",
+        display="flex",
+        align_items="center",
+        gap="auto",
         bg="#066699",
         padding_y="10px",
         padding_x="20px",

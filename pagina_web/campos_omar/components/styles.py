@@ -23,11 +23,13 @@ style = {
     rx.heading: {
         "font_weight": "500",
         "color": "blue",
-        "transform": "rotate(10deg) translate(100px, 50px)",
-        "transform_origin": f"75% 200%",
-        "animation_name": "colorchange",
-        "animation_duration": "2s",
-        "animation_iteration_count": "infinite",
+        "transform": "rotate(10deg) translate(100px)",
+        #"transform_origin": f"75% 200%",
+        "animation_name": "colorchange, slide-in",
+        "animation_duration": "2s , 3s",
+        "animation_iteration_count": "infinite , 1",
+        "animation_direction": "alternate , normal",
+        "animation_timing_function": "ease-in-out , ease-in-out",
     },
     rx.code: {
         "color": "green",
@@ -35,7 +37,11 @@ style = {
     "@keyframes colorchange": {
         "from": {"color": "red"},
         "to": {"color": "green"}
-}
+    },
+    "@keyframes slide-in": {
+        "from": {"transform": "translateX(-100%)"},
+        "to": {"transform": "translateX(0)"}
+    }
 }
 
 

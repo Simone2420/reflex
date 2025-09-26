@@ -22,7 +22,7 @@ def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.vstack(
         nav_bar(),
-        rx.heading("Hola"),
+        rx.heading("Hola", class_name="text",),
         rx.text("Hola 2", class_name="text",),
         link_button("Ingreso","https://reflex.dev/docs/library/"),
         margin="30px",
