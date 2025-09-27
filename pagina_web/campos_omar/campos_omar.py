@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from campos_omar.components.nav_bar import *
 from campos_omar.components.styles import *
 from campos_omar.components.section import *
+from campos_omar.components.product import *
 from rxconfig import config
 
 api = FastAPI()
@@ -36,10 +37,16 @@ def index() -> rx.Component:
             ),
             "main.png"
         ),
-        margin="10px",
+        general_section(
+            section_title("Productos"),
+            horizontal_content([
+                product("Jugos Naturales", "/products_assets/jugo.png")
+                
+            ]),
+            None
+        ), 
         
-    )
-    
+        ),
 
 
 app = rx.App(style=style, api_transformer=api)

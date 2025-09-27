@@ -24,7 +24,7 @@ def nav_bar() -> rx.Component :
             link_button(None,"Ingreso","https://reflex.dev/docs/library/"),
             align_items="center",
         ),
-        position="sticky",
+        position="fixed",
         display="flex",
         align_items="center",
         justify_content="space-evenly",
