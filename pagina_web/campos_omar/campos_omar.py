@@ -40,8 +40,14 @@ def index() -> rx.Component:
         general_section(
             section_title("Productos"),
             horizontal_content([
-                product("Jugos Naturales", "/products_assets/jugo.png")
-                
+                product("Jugos Naturales", "/products_assets/jugo.png"),
+                product("Snacks", "/products_assets/galletas.png"),
+                product("Harinas", "/products_assets/harina.png"),
+                product("Conservas", "/products_assets/mermelada.png"),
+                product("Aceites", "/products_assets/aceite.png"),
+                product("Condimentos", "/products_assets/comino.png"),
+                product("Super Alimentos", "/products_assets/cacao.png"),
+
             ]),
             None
         ), 
