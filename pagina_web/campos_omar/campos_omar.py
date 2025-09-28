@@ -9,6 +9,7 @@ from campos_omar.components.section import *
 from campos_omar.components.product import *
 from campos_omar.components.gallery_card import *
 from campos_omar.components.testify_card import *
+from campos_omar.components.ratings import *
 from rxconfig import config
 
 api = FastAPI()
@@ -70,8 +71,34 @@ def index() -> rx.Component:
                 ]),
             ]),
             None
-            )
-        ),
+            ),
+        general_section(
+            section_title("Testimonios"),
+            horizontal_content([
+                testify_card(
+                    rating(5), 
+                    "Los productos son de excepcional calidad",
+                    "Carlos Inti", 
+                    "Cliente", 
+                    "12/03/2023"
+                    ),
+                testify_card(
+                    rating(5), 
+                    "Las comisiones recibidas son justas",
+                    "Blass Muñoz", 
+                    "Agricultor", 
+                    "12/03/2023"
+                    ),
+                testify_card(
+                    rating(4), 
+                    "Los productos son naturales y deliciosos",
+                    "Nicolas Herrera", 
+                    "Cliente", 
+                    "12/03/2023"
+                    ),
+            ]),
+            None),
+        )
 
 
 app = rx.App(style=style, api_transformer=api)

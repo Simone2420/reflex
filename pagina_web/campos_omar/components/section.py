@@ -54,7 +54,7 @@ def content(content: list[rx.Component]) -> rx.Component:
         height="auto",
         
     )
-def horizontal_content(content: list[rx.Component]) -> rx.Component:
+def horizontal_content(content: list[rx.Component], **kwargs) -> rx.Component:
     return rx.hstack(
         *content,
         width="100%",
@@ -62,6 +62,7 @@ def horizontal_content(content: list[rx.Component]) -> rx.Component:
         gap="auto",
         justify="center",
         align="center",
+        **kwargs
     )
 def section_title(title: str) -> rx.Component:
     return rx.vstack(
