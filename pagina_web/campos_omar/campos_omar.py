@@ -7,6 +7,8 @@ from campos_omar.components.nav_bar import *
 from campos_omar.components.styles import *
 from campos_omar.components.section import *
 from campos_omar.components.product import *
+from campos_omar.components.gallery_card import *
+from campos_omar.components.testify_card import *
 from rxconfig import config
 
 api = FastAPI()
@@ -51,7 +53,24 @@ def index() -> rx.Component:
             ]),
             None
         ), 
-        
+        general_section(
+            section_title("Galería"),
+            content([
+                horizontal_content([
+                    gallery_card("/gallery_assets/jugos_naturales.png", "Jugos Naturales"),
+                    gallery_card("/gallery_assets/galletas_saludables.png", "Galletas Saludables"),
+                    gallery_card("/gallery_assets/mermeladas_naturales.png", "Mermeladas Naturales"),
+
+                ]),
+                horizontal_content([
+                    gallery_card("/gallery_assets/harinas_integrales.png", "Harinas Integrales"),
+                    gallery_card("/gallery_assets/aceites_saludables.png", "Aceites Saludables"),
+                    gallery_card("/gallery_assets/condimentos.png", "Condimentos"),
+
+                ]),
+            ]),
+            None
+            )
         ),
 
 
