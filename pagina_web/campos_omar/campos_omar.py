@@ -96,7 +96,7 @@ def index() -> rx.Component:
                     "Cliente", 
                     "12/03/2023"
                     ),
-            ]),
+            ], gap="60px"),
             None),
         )
 

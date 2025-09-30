@@ -47,19 +47,19 @@ def section_content(title: str | None, content: rx.Component) -> rx.Component:
         
     )
 
-def content(content: list[rx.Component]) -> rx.Component:
+def content(content: list[rx.Component], **kwargs) -> rx.Component:
     return rx.vstack(
         *content,
         width="100%",
         height="auto",
-        
+        **kwargs
     )
+
 def horizontal_content(content: list[rx.Component], **kwargs) -> rx.Component:
     return rx.hstack(
         *content,
         width="100%",
         height="auto",
-        gap="auto",
         justify="center",
         align="center",
         **kwargs
