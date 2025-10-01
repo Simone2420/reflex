@@ -59,7 +59,7 @@ def horizontal_content(content: list[rx.Component], **kwargs) -> rx.Component:
     return rx.hstack(
         *content,
         width="100%",
-        height="auto",
+        height="100%",
         justify="center",
         align="center",
         **kwargs

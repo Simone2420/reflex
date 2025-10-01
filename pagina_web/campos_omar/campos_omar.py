@@ -10,6 +10,8 @@ from campos_omar.components.product import *
 from campos_omar.components.gallery_card import *
 from campos_omar.components.testify_card import *
 from campos_omar.components.ratings import *
+from campos_omar.components.form import *
+from campos_omar.components.input import *
 from rxconfig import config
 
 api = FastAPI()
@@ -98,7 +100,24 @@ def index() -> rx.Component:
                     ),
             ], gap="60px"),
             None),
-        )
+            general_section(
+            section_title("Contáctanos"),
+            horizontal_content([
+                section_content("Campos Omar", section_content(
+                    "Contactate con el area de mercadeo",
+                    content([
+                        rx.text("Descubre cómo nuestros productos orgánicos pueden transformar tu alimentación y contribuir a un futuro más saludable y sostenible. Completa el formulario y nos pondremos en contacto contigo muy pronto.")
+                    ]))
+                ),
+                form([
+                    input_component("Nombre", "300px"),
+                    input_component("Correo Electrónico", "300px"),
+                    textarea_component("Escribe tu mensaje aquí...", "300px", "100px")
+                ])
+
+            ]),
+            None
+        ))
 
 
 app = rx.App(style=style, api_transformer=api)

@@ -47,6 +47,11 @@ style = {
         "text_decoration": "none",
         "color": "#33FF4E",
     },
+    ".input::placeholder": {
+        "animation_name": "moveplaceholder",
+        "animation_duration": "0.5s",
+        "animation_fill_mode": "forwards",
+    },
     "@keyframes colorchange": {
         "from": {"color": "red"},
         "to": {"color": "green"}
@@ -54,7 +59,12 @@ style = {
     "@keyframes slide-in": {
         "from": {"transform": "translateX(-100%)"},
         "to": {"transform": "translateX(0)"}
+    },
+    "@keyframes moveplaceholder": {
+        "from": {"transform": "translateY(0)"},
+        "to": {"transform": "translateY(-25px)"}
     }
+
 }
 
 
