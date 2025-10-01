@@ -19,16 +19,14 @@ style = {
         "margin_bottom": "1em",
         "margin_top": "0.5em",
     },
-    rx.heading: {
+    ".move": {
         "font_weight": "500",
-        #"color": "blue",
-        #"transform": "rotate(10deg) translate(100px)",
-        #"transform_origin": f"75% 200%",
-        #"animation_name": "colorchange, slide-in",
-        #"animation_duration": "2s , 3s",
-        #"animation_iteration_count": "infinite , 1",
-        #"animation_direction": "alternate , normal",
-        #"animation_timing_function": "ease-in-out , ease-in-out",
+        "color": "blue",
+        "animation_name": "colorchange, slide-in",
+        "animation_duration": "2s , 3s",
+        "animation_iteration_count": "infinite , 1",
+        "animation_direction": "alternate , normal",
+        "animation_timing_function": "ease-in-out , ease-in-out",
     },
     rx.code: {
         "color": "green",
@@ -54,7 +52,7 @@ style = {
     },
     "@keyframes colorchange": {
         "from": {"color": "red"},
-        "to": {"color": "green"}
+        "to": {"color": "yellow"}
     },
     "@keyframes slide-in": {
         "from": {"transform": "translateX(-100%)"},

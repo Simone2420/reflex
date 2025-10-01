@@ -2,7 +2,7 @@
 
 import reflex as rx
 from fastapi import FastAPI
-
+from sqlmodel import Field, Session, SQLModel, create_engine, select
 from campos_omar.components.nav_bar import *
 from campos_omar.components.styles import *
 from campos_omar.components.section import *
@@ -12,6 +12,7 @@ from campos_omar.components.testify_card import *
 from campos_omar.components.ratings import *
 from campos_omar.components.form import *
 from campos_omar.components.input import *
+from campos_omar.components.footer import *
 from rxconfig import config
 
 api = FastAPI()
@@ -117,7 +118,15 @@ def index() -> rx.Component:
 
             ]),
             None
-        ))
+        ),
+        footer([
+            rx.link("Nosostros"),
+            rx.link("Producto"),
+            rx.link("Galeria"),
+            rx.link("Testimonios"),
+            rx.link("Contacto")
+        ])
+        )
 
 
 app = rx.App(style=style, api_transformer=api)

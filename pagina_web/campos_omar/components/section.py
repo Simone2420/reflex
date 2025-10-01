@@ -1,6 +1,6 @@
 import reflex as rx
 
-def section(title: str, content: str | None, background_image: str | None) -> rx.Component:
+def section(title: str, content: str | None, background_image: str | None, **kwargs) -> rx.Component:
     return rx.vstack(
         rx.heading(title, 
                    font_size="24px", 
@@ -15,6 +15,7 @@ def section(title: str, content: str | None, background_image: str | None) -> rx
             rx.button("Contactenos", class_name="button"),
         ),
         background_image=f"url({background_image})",
+        **kwargs,
         width="100%",
         padding="20px",
         height="auto",
@@ -38,12 +39,13 @@ def general_section(section_title: rx.Component, section_content: rx.Component, 
         justify="center",
     )
 
-def section_content(title: str | None, content: rx.Component) -> rx.Component:
+def section_content(title: str | None, content: rx.Component,**kwargs) -> rx.Component:
     return rx.vstack(
         rx.heading(title, font_size="32px", margin_bottom="10px") if title else None,
         content,
         width="100%",
         height="auto",
+        **kwargs
         
     )
 
@@ -64,8 +66,9 @@ def horizontal_content(content: list[rx.Component], **kwargs) -> rx.Component:
         align="center",
         **kwargs
     )
-def section_title(title: str) -> rx.Component:
+def section_title(title: str, **kwargs) -> rx.Component:
     return rx.vstack(
-        rx.heading(title, font_size="24px", text_decoration="underline"),
+        rx.heading(title, font_size="24px", text_decoration="underline", **kwargs),
+        
 
     )
